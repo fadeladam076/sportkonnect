@@ -6,7 +6,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Navbar } from '@/components/layout/Navbar'
 import { MobileNav } from '@/components/layout/MobileNav'
-import { FavoriteButton } from './FavoriteButton'
 
 export const metadata = { title: 'Espace Recruteur — SportKonnect' }
 
