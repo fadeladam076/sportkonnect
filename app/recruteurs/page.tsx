@@ -48,7 +48,7 @@ export default async function RecruteursPage() {
         positionMain: true, city: true, nationality: true, aiScore: true, healthStatus: true,
         stats: { orderBy: { season: 'desc' }, take: 1 },
       } } } } },
-    }) as typeof recruiter
+    }) as any
   }
 
   const favorites = recruiter?.favorites ?? []
