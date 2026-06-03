@@ -22,7 +22,7 @@ export function MobileNav() {
         const active = pathname === item.href || pathname.startsWith(item.href + '/')
         return (
           <Link
-            key={`${item.href}-${item.label}`}
+            key={`${item.href}-${item.i18nKey}`}
             href={item.href}
             className={`flex-1 flex flex-col items-center justify-center py-2.5 gap-0.5 transition-colors ${
               active ? 'text-[#22C55E]' : 'text-[#9CA3AF]'
