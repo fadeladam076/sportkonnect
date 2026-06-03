@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "login": "Anmelden",
+    "register": "Konto erstellen",
+    "profile": "Mein Profil",
+    "feed": "Feed",
+    "matches": "Spiele",
+    "messages": "Nachrichten",
+    "clubs": "Vereine",
+    "search": "Suche",
+    "logout": "Abmelden"
+  },
+  "hero": {
+    "title": "Werde entdeckt.",
+    "subtitle": "Die Plattform für afrikanischen Amateurfußball",
+    "description": "Erstelle deinen digitalen Pass, nimm an Spielen teil und zeige Scouts deine Fortschritte.",
+    "cta_register": "Mein Profil erstellen",
+    "cta_login": "Anmelden"
+  },
+  "auth": {
+    "email": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirm_password": "Passwort bestätigen",
+    "login": "Anmelden",
+    "register": "Registrieren",
+    "forgot_password": "Passwort vergessen?",
+    "no_account": "Noch kein Konto?",
+    "already_account": "Bereits ein Konto?"
+  },
+  "player": {
+    "position": "Position",
+    "midfielder": "Mittelfeldspieler",
+    "nationality": "Nationalität",
+    "age": "Alter",
+    "height": "Größe",
+    "weight": "Gewicht",
+    "foot": "Starker Fuß",
+    "health": {
+      "FIT": "Verfügbar",
+      "INJURED": "Verletzt",
+      "SUSPENDED": "Gesperrt",
+      "RECOVERING": "In Erholung"
+    }
+  },
+  "stats": {
+    "goals": "Tore",
+    "assists": "Vorlagen",
+    "matches": "Gespielte Spiele",
+    "wins": "Siege",
+    "minutes": "Gespielte Minuten",
+    "speed": "Geschwindigkeit",
+    "technique": "Technik",
+    "physical": "Physisch",
+    "mental": "Mental",
+    "vision": "Übersicht",
+    "shooting": "Schießen",
+    "score": "Gesamtergebnis",
+    "free": "Kostenlos",
+    "languages": "Sprachen",
+    "cost": "Kosten"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "error": "Ein Fehler ist aufgetreten",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "share": "Teilen",
+    "follow": "Folgen",
+    "unfollow": "Nicht mehr folgen",
+    "back": "Zurück",
+    "discover": "Entdecken"
+  },
+  "features": {
+    "title": "Alles was du brauchst",
+    "subtitle": "Eine einzige Plattform zum Spielen, Fortschritte machen und Entdecktwerden.",
+    "passport": {
+      "title": "Digitaler Pass",
+      "desc": "Statistiken, Gesundheit, Medien — dein vollständiges Profil, sichtbar für Scouts weltweit.",
+      "headline": "Dein Profil spricht für dich.",
+      "details": "Saisonstatistiken, KI-Score, physischer Radar, Video-Highlights, Gesundheitszustand — alles, was ein Scout sehen möchte, an einem Ort.",
+      "cta": "Meinen Pass erstellen →"
+    },
+    "matches": {
+      "title": "Lokale Spiele",
+      "desc": "Finde und schließe dich Spielen in deiner Nähe mit nur wenigen Klicks an."
+    },
+    "scouts": {
+      "title": "Sichtbarkeit für Scouts",
+      "desc": "Scouts suchen auf SportKonnect nach Talenten. Sei sichtbar."
+    }
+  },
+  "banner": {
+    "title_start": "Zeige deine",
+    "title_accent": "Fortschritte.",
+    "subtitle": "Schließe dich Tausenden von afrikanischen Spielern an, die ihre Karriere auf SportKonnect aufbauen.",
+    "cta": "Jetzt anfangen — Es ist kostenlos"
+  },
+  "footer": {
+    "copyright": "© 2026 SportKonnect — Die Plattform für afrikanischen Amateurfußball."
+  },
+  "feed": {
+    "title": "Feed",
+    "empty": "Noch keine Beiträge. Teile als Erster etwas!",
+    "end": "Du hast alles gesehen! #Perform #Progress #Konnect",
+    "placeholder": "Teile eine Leistung, ein Ergebnis... #Perform",
+    "photo": "Foto",
+    "video": "Video",
+    "publish": "Veröffentlichen",
+    "publishing": "Wird veröffentlicht...",
+    "anonymous": "Anonym",
+    "reply": "Antworten",
+    "reply_placeholder": "Deine Antwort...",
+    "cancel": "Abbrechen",
+    "comment_placeholder": "Einen Kommentar hinzufügen...",
+    "time": {
+      "just_now": "Gerade eben",
+      "mins_ago": "vor {{count}}m",
+      "hours_ago": "vor {{count}}h",
+      "days_ago": "vor {{count}}t"
+    }
+  },
+  "matchs": {
+    "title": "Verfügbare Spiele",
+    "create": "+ Erstellen",
+    "filter_placeholder": "Stadt...",
+    "filter_btn": "Filtern",
+    "reset": "Zurücksetzen",
+    "empty_title": "Keine Spiele gefunden",
+    "empty_desc": "Sei der Erste, der ein Spiel in deiner Stadt organisiert!",
+    "create_match": "Spiel erstellen",
+    "levels": {
+      "all": "Alle Niveaus",
+      "beginner": "Anfänger",
+      "intermediate": "Mittel",
+      "advanced": "Fortgeschritten",
+      "pro": "Profi"
+    }
+  },
+  "recherche": {
+    "title": "Spielersuche",
+    "name_placeholder": "Name, Nationalität...",
+    "city_placeholder": "Stadt",
+    "search_btn": "Suchen",
+    "no_results": "Keine Spieler mit diesen Kriterien gefunden.",
+    "start_search": "Starte eine Suche, um Spieler zu finden.",
+    "positions": {
+      "all": "Alle Positionen",
+      "goalkeeper": "Torwart",
+      "defender": "Verteidiger",
+      "midfielder": "Mittelfeldspieler",
+      "forward": "Stürmer"
+    },
+    "results_count_one": "{{count}} Spieler gefunden",
+    "results_count_other": "{{count}} Spieler gefunden"
+  },
+  "messages": {
+    "title": "Nachrichten",
+    "desc": "Echtzeit-Nachrichten mit Socket.io kommen in Phase 3. Du kannst Spieler und Scouts direkt kontaktieren.",
+    "coming_soon": "Phase 3 — Demnächst verfügbar"
+  }
+}

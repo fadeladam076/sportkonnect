@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "首页",
+    "login": "登录",
+    "register": "创建账户",
+    "profile": "我的个人资料",
+    "feed": "动态",
+    "matches": "比赛",
+    "messages": "消息",
+    "clubs": "俱乐部",
+    "search": "搜索",
+    "logout": "注销"
+  },
+  "hero": {
+    "title": "脱颖而出。",
+    "subtitle": "非洲业余足球平台",
+    "description": "建立您的数字护照，参加比赛，向球探展示您的进步。",
+    "cta_register": "创建我的个人资料",
+    "cta_login": "登录"
+  },
+  "auth": {
+    "email": "电子邮件地址",
+    "password": "密码",
+    "confirm_password": "确认密码",
+    "login": "登录",
+    "register": "注册",
+    "forgot_password": "忘记密码？",
+    "no_account": "还没有账户？",
+    "already_account": "已有账户？"
+  },
+  "player": {
+    "position": "位置",
+    "midfielder": "中场",
+    "nationality": "国籍",
+    "age": "年龄",
+    "height": "身高",
+    "weight": "体重",
+    "foot": "惯用脚",
+    "health": {
+      "FIT": "可上场",
+      "INJURED": "受伤",
+      "SUSPENDED": "停赛",
+      "RECOVERING": "恢复中"
+    }
+  },
+  "stats": {
+    "goals": "进球",
+    "assists": "助攻",
+    "matches": "参赛场数",
+    "wins": "胜场",
+    "minutes": "上场时间",
+    "speed": "速度",
+    "technique": "技术",
+    "physical": "体能",
+    "mental": "心理",
+    "vision": "视野",
+    "shooting": "射门",
+    "score": "总分",
+    "free": "免费",
+    "languages": "语言",
+    "cost": "费用"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "发生错误",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "view": "查看",
+    "share": "分享",
+    "follow": "关注",
+    "unfollow": "取消关注",
+    "back": "返回",
+    "discover": "发现"
+  },
+  "features": {
+    "title": "您所需的一切",
+    "subtitle": "一个集踢球、进步和被发掘于一体的平台。",
+    "passport": {
+      "title": "数字护照",
+      "desc": "数据、健康、媒体——您向全球球探展示的完整资料。",
+      "headline": "您的资料代表您的实力。",
+      "details": "赛季数据、AI 评分、身体雷达、视频集锦、健康状况——球探想看的一切，都在这里。",
+      "cta": "创建我的护照 →"
+    },
+    "matches": {
+      "title": "本地比赛",
+      "desc": "轻点几下即可查找并加入您附近的比赛。"
+    },
+    "scouts": {
+      "title": "球探可见度",
+      "desc": "球探正在 SportKonnect 上寻找人才。让别人看到您。"
+    }
+  },
+  "banner": {
+    "title_start": "展示您的",
+    "title_accent": "进步。",
+    "subtitle": "加入数千名在 SportKonnect 上建立职业生涯的非洲球员。",
+    "cta": "立即开始 — 完全免费"
+  },
+  "footer": {
+    "copyright": "© 2026 SportKonnect — 非洲业余足球平台。"
+  },
+  "feed": {
+    "title": "动态",
+    "empty": "暂无动态。成为第一个分享的人！",
+    "end": "你已经看完了！#Perform #Progress #Konnect",
+    "placeholder": "分享表现、结果... #Perform",
+    "photo": "照片",
+    "video": "视频",
+    "publish": "发布",
+    "publishing": "发布中...",
+    "anonymous": "匿名",
+    "reply": "回复",
+    "reply_placeholder": "你的回复...",
+    "cancel": "取消",
+    "comment_placeholder": "添加评论...",
+    "time": {
+      "just_now": "刚刚",
+      "mins_ago": "{{count}}分钟前",
+      "hours_ago": "{{count}}小时前",
+      "days_ago": "{{count}}天前"
+    }
+  },
+  "matchs": {
+    "title": "可用比赛",
+    "create": "+ 创建",
+    "filter_placeholder": "城市...",
+    "filter_btn": "筛选",
+    "reset": "重置",
+    "empty_title": "未找到比赛",
+    "empty_desc": "成为第一个在您所在城市组织比赛的人！",
+    "create_match": "创建比赛",
+    "levels": {
+      "all": "所有级别",
+      "beginner": "初学者",
+      "intermediate": "中级",
+      "advanced": "高级",
+      "pro": "专业"
+    }
+  },
+  "recherche": {
+    "title": "球员搜索",
+    "name_placeholder": "姓名、国籍...",
+    "city_placeholder": "城市",
+    "search_btn": "搜索",
+    "no_results": "没有找到符合这些条件的球员。",
+    "start_search": "开始搜索以找到球员。",
+    "positions": {
+      "all": "所有位置",
+      "goalkeeper": "守门员",
+      "defender": "后卫",
+      "midfielder": "中场",
+      "forward": "前锋"
+    },
+    "results_count_one": "找到 {{count}} 名球员",
+    "results_count_other": "找到 {{count}} 名球员"
+  },
+  "messages": {
+    "title": "消息",
+    "desc": "与 Socket.io 的实时消息功能将在第三阶段推出。您将能够直接联系球员和球探。",
+    "coming_soon": "第三阶段 — 即将推出"
+  }
+}

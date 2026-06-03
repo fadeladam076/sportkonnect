@@ -1,0 +1,323 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  PLAYER
+  CLUB_ADMIN
+  RECRUITER
+  MODERATOR
+  ADMIN
+}
+
+enum Health {
+  FIT
+  INJURED
+  SUSPENDED
+  RECOVERING
+}
+
+enum PostType {
+  TEXT
+  IMAGE
+  VIDEO
+  STATS
+}
+
+enum MediaCat {
+  HIGHLIGHT
+  FULL_MATCH
+  TRAINING
+  DETECTION
+  COMPETITION
+}
+
+enum MsgType {
+  TEXT
+  IMAGE
+  VIDEO
+  DOCUMENT
+}
+
+enum MatchStatus {
+  OPEN
+  FULL
+  CLOSED
+  COMPLETED
+}
+
+model User {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  role         Role      @default(PLAYER)
+  lang         String    @default("fr")
+  verified     Boolean   @default(false)
+  createdAt    DateTime  @default(now())
+  player       Player?
+  club         Club?
+  recruiter    Recruiter?
+  posts        Post[]
+  comments     Comment[]
+  sentMessages Message[] @relation("sender")
+  notifications Notification[]
+  conversationParticipants ConversationParticipant[]
+}
+
+model Player {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  firstName       String
+  lastName        String
+  dob             DateTime
+  nationality     String
+  city            String
+  height          Float?
+  weight          Float?
+  foot            String?
+  positionMain    String
+  positionsOther  String[]
+  photoUrl        String?
+  healthStatus    Health   @default(FIT)
+  vma             Float?
+  lastMedicalDate DateTime?
+  aiScore         Float?
+  stats           PlayerStat[]
+  injuries        Injury[]
+  education       Education?
+  medicalDocs     MedicalDoc[]
+  media           Media[]
+  clubMemberships ClubPlayer[]
+  matchParticipations MatchParticipant[]
+  favoritedBy     RecruiterFavorite[]
+}
+
+model PlayerStat {
+  id            String   @id @default(cuid())
+  playerId      String
+  player        Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  season        String
+  matchesPlayed Int      @default(0)
+  wins          Int      @default(0)
+  goals         Int      @default(0)
+  assists       Int      @default(0)
+  minutesPlayed Int      @default(0)
+  yellowCards   Int      @default(0)
+  redCards      Int      @default(0)
+  speed         Float?
+  technique     Float?
+  physical      Float?
+  mental        Float?
+  vision        Float?
+  shooting      Float?
+  updatedAt     DateTime @updatedAt
+  @@unique([playerId, season])
+}
+
+model Recruiter {
+  id           String               @id @default(cuid())
+  userId       String               @unique
+  user         User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  organization String
+  position     String?
+  photoUrl     String?
+  verified     Boolean              @default(false)
+  favorites    RecruiterFavorite[]
+}
+
+model Club {
+  id          String       @id @default(cuid())
+  userId      String       @unique
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name        String
+  logoUrl     String?
+  city        String
+  description String?
+  foundedYear Int?
+  verified    Boolean      @default(false)
+  players     ClubPlayer[]
+  matches     Match[]
+}
+
+model ClubPlayer {
+  id       String    @id @default(cuid())
+  clubId   String
+  club     Club      @relation(fields: [clubId], references: [id], onDelete: Cascade)
+  playerId String
+  player   Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  joinedAt DateTime  @default(now())
+  leftAt   DateTime?
+  isActive Boolean   @default(true)
+  @@unique([clubId, playerId])
+}
+
+model Match {
+  id           String           @id @default(cuid())
+  title        String
+  organizerId  String
+  clubId       String?
+  club         Club?            @relation(fields: [clubId], references: [id])
+  city         String
+  address      String
+  latitude     Float?
+  longitude    Float?
+  date         DateTime
+  level        String
+  ageMin       Int?
+  ageMax       Int?
+  maxPlayers   Int
+  status       MatchStatus      @default(OPEN)
+  participants MatchParticipant[]
+  createdAt    DateTime         @default(now())
+}
+
+model MatchParticipant {
+  id       String   @id @default(cuid())
+  matchId  String
+  match    Match    @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  playerId String
+  player   Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  joinedAt DateTime @default(now())
+  @@unique([matchId, playerId])
+}
+
+model Post {
+  id        String    @id @default(cuid())
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  content   String?
+  mediaUrls String[]
+  hashtags  String[]
+  type      PostType  @default(TEXT)
+  likes     Like[]
+  comments  Comment[]
+  createdAt DateTime  @default(now())
+  @@index([createdAt(sort: Desc)])
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  postId    String
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+  userId    String
+  createdAt DateTime @default(now())
+  @@unique([postId, userId])
+}
+
+model Comment {
+  id        String    @id @default(cuid())
+  postId    String
+  post      Post      @relation(fields: [postId], references: [id], onDelete: Cascade)
+  authorId  String
+  author    User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  content   String
+  parentId  String?
+  parent    Comment?  @relation("Replies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies   Comment[] @relation("Replies")
+  createdAt DateTime  @default(now())
+  @@index([postId])
+}
+
+model Conversation {
+  id           String                    @id @default(cuid())
+  createdAt    DateTime                  @default(now())
+  messages     Message[]
+  participants ConversationParticipant[]
+}
+
+model ConversationParticipant {
+  id             String       @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  @@unique([conversationId, userId])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderId       String
+  sender         User         @relation("sender", fields: [senderId], references: [id], onDelete: Cascade)
+  content        String?
+  type           MsgType      @default(TEXT)
+  mediaUrl       String?
+  readAt         DateTime?
+  createdAt      DateTime     @default(now())
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  recipientId String
+  recipient   User     @relation(fields: [recipientId], references: [id], onDelete: Cascade)
+  type        String
+  payload     Json
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  @@index([recipientId, read])
+}
+
+model Injury {
+  id        String    @id @default(cuid())
+  playerId  String
+  player    Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  type      String
+  bodyPart  String
+  startDate DateTime
+  endDate   DateTime?
+  notes     String?
+  createdAt DateTime  @default(now())
+}
+
+model MedicalDoc {
+  id        String   @id @default(cuid())
+  playerId  String
+  player    Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  type      String
+  fileUrl   String
+  date      DateTime
+  status    String?
+  createdAt DateTime @default(now())
+}
+
+model Education {
+  id         String   @id @default(cuid())
+  playerId   String   @unique
+  player     Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  school     String?
+  level      String?
+  gpa        Float?
+  discipline String?
+  attendance Float?
+  diplomas   String[]
+}
+
+model RecruiterFavorite {
+  id          String    @id @default(cuid())
+  recruiterId String
+  recruiter   Recruiter @relation(fields: [recruiterId], references: [id], onDelete: Cascade)
+  playerId    String
+  player      Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  notes       String?
+  createdAt   DateTime  @default(now())
+  @@unique([recruiterId, playerId])
+}
+
+model Media {
+  id        String   @id @default(cuid())
+  playerId  String
+  player    Player   @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  url       String
+  category  MediaCat
+  title     String?
+  duration  Int?
+  thumbnail String?
+  createdAt DateTime @default(now())
+}

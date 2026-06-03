@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "login": "Login",
+    "register": "Create account",
+    "profile": "My profile",
+    "feed": "Feed",
+    "matches": "Matches",
+    "messages": "Messages",
+    "clubs": "Clubs",
+    "search": "Search",
+    "logout": "Logout"
+  },
+  "hero": {
+    "title": "Get noticed.",
+    "subtitle": "The African amateur football platform",
+    "description": "Build your digital passport, join matches, and show your progress to scouts.",
+    "cta_register": "Create my profile",
+    "cta_login": "Login"
+  },
+  "auth": {
+    "email": "Email address",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "login": "Login",
+    "register": "Sign up",
+    "forgot_password": "Forgot password?",
+    "no_account": "No account yet?",
+    "already_account": "Already have an account?"
+  },
+  "player": {
+    "position": "Position",
+    "midfielder": "Midfielder",
+    "nationality": "Nationality",
+    "age": "Age",
+    "height": "Height",
+    "weight": "Weight",
+    "foot": "Strong foot",
+    "health": {
+      "FIT": "Available",
+      "INJURED": "Injured",
+      "SUSPENDED": "Suspended",
+      "RECOVERING": "Recovering"
+    }
+  },
+  "stats": {
+    "goals": "Goals",
+    "assists": "Assists",
+    "matches": "Matches played",
+    "wins": "Wins",
+    "minutes": "Minutes played",
+    "speed": "Speed",
+    "technique": "Technique",
+    "physical": "Physical",
+    "mental": "Mental",
+    "vision": "Vision",
+    "shooting": "Shooting",
+    "score": "Global Score",
+    "free": "Free",
+    "languages": "Languages",
+    "cost": "Cost"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "share": "Share",
+    "follow": "Follow",
+    "unfollow": "Unfollow",
+    "back": "Back",
+    "discover": "Discover"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "A single platform to play, progress, and get noticed.",
+    "passport": {
+      "title": "Digital Passport",
+      "desc": "Stats, health, media — your complete profile visible to scouts worldwide.",
+      "headline": "Your profile speaks for you.",
+      "details": "Season stats, AI score, physical radar, video highlights, health status — everything a scout wants to see, in one place.",
+      "cta": "Create my passport →"
+    },
+    "matches": {
+      "title": "Local Matches",
+      "desc": "Find and join matches near you in a few taps."
+    },
+    "scouts": {
+      "title": "Scout Visibility",
+      "desc": "Scouts are looking for talents on SportKonnect. Be visible."
+    }
+  },
+  "banner": {
+    "title_start": "Show your",
+    "title_accent": "progress.",
+    "subtitle": "Join thousands of African players building their career on SportKonnect.",
+    "cta": "Start now — It's free"
+  },
+  "footer": {
+    "copyright": "© 2026 SportKonnect — The African amateur football platform."
+  },
+  "feed": {
+    "title": "News Feed",
+    "empty": "No posts yet. Be the first to share something!",
+    "end": "You've seen it all! #Perform #Progress #Konnect",
+    "placeholder": "Share a performance, a result... #Perform",
+    "photo": "Photo",
+    "video": "Video",
+    "publish": "Publish",
+    "publishing": "Publishing...",
+    "anonymous": "Anonymous",
+    "reply": "Reply",
+    "reply_placeholder": "Your reply...",
+    "cancel": "Cancel",
+    "comment_placeholder": "Add a comment...",
+    "time": {
+      "just_now": "Just now",
+      "mins_ago": "{{count}}m ago",
+      "hours_ago": "{{count}}h ago",
+      "days_ago": "{{count}}d ago"
+    }
+  },
+  "matchs": {
+    "title": "Available Matches",
+    "create": "+ Create",
+    "filter_placeholder": "City...",
+    "filter_btn": "Filter",
+    "reset": "Reset",
+    "empty_title": "No matches found",
+    "empty_desc": "Be the first to organize a match in your city!",
+    "create_match": "Create a match",
+    "levels": {
+      "all": "All levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "pro": "Pro"
+    }
+  },
+  "recherche": {
+    "title": "Player Search",
+    "name_placeholder": "Name, nationality...",
+    "city_placeholder": "City",
+    "search_btn": "Search",
+    "no_results": "No players found with these criteria.",
+    "start_search": "Start a search to find players.",
+    "positions": {
+      "all": "All positions",
+      "goalkeeper": "Goalkeeper",
+      "defender": "Defender",
+      "midfielder": "Midfielder",
+      "forward": "Forward"
+    },
+    "results_count_one": "{{count}} player found",
+    "results_count_other": "{{count}} players found"
+  },
+  "messages": {
+    "title": "Messaging",
+    "desc": "Real-time messaging with Socket.io is coming in Phase 3. You will be able to contact players and scouts directly.",
+    "coming_soon": "Phase 3 — Coming soon"
+  }
+}
