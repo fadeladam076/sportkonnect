@@ -42,3 +42,16 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #4B5563;
 }
+
+/* Safe areas for mobile */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+}

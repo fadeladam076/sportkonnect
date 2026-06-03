@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Poppins, Inter } from 'next/font/google'
 import { cookies } from 'next/headers'
 import { Providers } from '@/components/providers'
@@ -17,6 +17,15 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: 'cover',
+  themeColor: '#0F172A',
+}
 
 export const metadata: Metadata = {
   title: 'SportKonnect — Fais-toi repérer.',
@@ -42,7 +51,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <html lang={locale} className="dark" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${inter.variable} bg-[#0F172A] text-white antialiased`}
+        className={`${poppins.variable} ${inter.variable} bg-[#0F172A] text-white antialiased overflow-x-hidden w-full`}
       >
         <Providers>{children}</Providers>
       </body>
