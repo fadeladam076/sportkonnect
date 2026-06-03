@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
 import { LanguageSelector } from '@/components/layout/LanguageSelector'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 const FEATURES = (t: any) => [
   {
@@ -39,7 +39,7 @@ export default function HomePage() {
   const features = FEATURES(t)
   const stats = STATS(t)
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -47,17 +47,17 @@ export default function HomePage() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   }
 
-  const slideInLeft = {
+  const slideInLeft: Variants = {
     hidden: { opacity: 0, x: -50 },
     show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   }
 
-  const slideInRight = {
+  const slideInRight: Variants = {
     hidden: { opacity: 0, x: 50 },
     show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: 'easeOut' } },
   }
