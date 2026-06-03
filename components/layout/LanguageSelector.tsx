@@ -36,9 +36,8 @@ export function LanguageSelector() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/5 transition-colors border border-white/10"
+        className="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg hover:bg-white/5 transition-colors border border-white/10"
       >
-        <span className="text-lg">{LOCALE_FLAGS[currentLocale]}</span>
         <span className="text-sm font-medium uppercase">{currentLocale}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}

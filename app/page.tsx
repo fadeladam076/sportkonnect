@@ -92,15 +92,15 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative z-50 flex items-center justify-between px-6 md:px-12 py-5"
         >
-          <Image src="/logo-white.png" alt="SportKonnect" width={150} height={38} className="h-8 w-auto" priority />
-          <div className="flex items-center gap-3">
+          <Image src="/logo-white.png" alt="SportKonnect" width={150} height={38} className="h-6 sm:h-8 w-auto shrink-0" priority />
+          <div className="flex items-center gap-1.5 sm:gap-3">
             <LanguageSelector />
             <Link href="/login"
-              className="font-inter text-sm text-white/70 hover:text-white transition-colors px-4 py-2">
+              className="font-inter text-xs sm:text-sm text-white/70 hover:text-white transition-colors px-2 sm:px-4 py-2 shrink-0">
               {t('nav.login')}
             </Link>
             <Link href="/register"
-              className="bg-[#0B8F3C] hover:bg-[#22C55E] text-white rounded-full px-5 py-2.5 font-inter text-sm font-semibold transition-colors">
+              className="hidden sm:block bg-[#0B8F3C] hover:bg-[#22C55E] text-white rounded-full px-5 py-2.5 font-inter text-sm font-semibold transition-colors shrink-0">
               {t('nav.register')}
             </Link>
           </div>
